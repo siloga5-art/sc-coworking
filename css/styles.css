@@ -1,0 +1,446 @@
+:root {
+  --bg-main: #f4efe7;
+  --bg-secondary: #f8f2ea;
+  --accent: #9bb59a;
+  --accent-dark: #71866f;
+  --text-main: #1f2f2d;
+  --text-soft: #646a68;
+  --white: #ffffff;
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* Utilidades */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Navbar */
+
+.main-header {
+  position: relative;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background-color: rgba(244, 239, 231, 0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;   /* imagen arriba, texto debajo */
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.logo-image {
+  height: 80px;             /* aquí mandas tú: súbelo o bájalo si quieres */
+  width: auto;
+  display: block;
+}
+
+.logo-text {
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
+.logo-main {
+  font-weight: 600;.
+  font-size: 1rem;
+}
+
+.logo-sub {
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-soft);
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-dark);
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  height: 90vh;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.1);
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(244, 239, 231, 0.2),
+    rgba(244, 239, 231, 0.8)
+  );
+  z-index: -1;
+}
+
+/* Contenedor interno del hero: logo + texto */
+.hero-inner {
+  margin-top: 5.5rem; /* compensa el navbar fijo */
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Caja donde vive el logo cuadrado */
+.hero-logo-box {
+  max-width: 260px;       /* tamaño máximo del logo en escritorio */
+  background-color: rgba(244, 239, 231, 0.9);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  flex-shrink: 0;
+}
+
+/* El logo ocupa el ancho de la caja, manteniendo proporción */
+.hero-logo-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ajusta el texto a la derecha del logo */
+.hero-content {
+  max-width: 640px;
+}
+
+/* Opcional: ajusta un pelín el tamaño del título si lo ves enorme */
+.hero h1 {
+  font-size: clamp(2.3rem, 4.6vw, 3.2rem);
+}
+
+
+.hero h1 span {
+  display: block;
+  font-size: clamp(2.6rem, 5.4vw, 3.6rem);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  margin-bottom: 1.8rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.9rem 1.9rem;
+  border-radius: 999px;
+  background-color: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.98rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* Sección servicios */
+
+.services {
+  background-color: var(--bg-secondary);
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 2.8rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  background-color: var(--bg-main);
+  border-radius: 1.4rem;
+  padding: 1.8rem 1.6rem;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--accent);
+  color: var(--white);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.service-card h3 {
+  margin-bottom: 0.4rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+/* Quiénes somos */
+
+.about {
+  text-align: center;
+}
+
+.about h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--text-soft);
+}
+
+/* Tarifas */
+
+.pricing h2 {
+  text-align: center;
+  margin-bottom: 2.6rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.pricing-card {
+  background-color: var(--bg-secondary);
+  border-radius: 1.4rem;
+  padding: 1.9rem 1.6rem;
+  text-align: left;
+}
+
+.pricing-card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.price {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  margin-bottom: 0.6rem;
+}
+
+.pricing-card p {
+  font-size: 0.95rem;
+  color: var(--text-soft);
+}
+
+/* Galería */
+
+.gallery h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--text-soft);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cada foto ocupa un “bloque” con proporción fija */
+.gallery-item {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;   /* todas con la misma forma */
+}
+
+/* La imagen se recorta dentro del bloque */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.gallery-item.placeholder {
+  background: linear-gradient(
+    135deg,
+    rgba(155, 181, 154, 0.25),
+    rgba(155, 181, 154, 0.05)
+  );
+}
+
+/* Contacto */
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-soft);
+}
+
+.contact-list {
+  list-style: none;
+  max-width: 560px;
+  margin: 0 auto;
+  font-size: 0.96rem;
+}
+
+.contact-list li + li {
+  margin-top: 0.4rem;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 1.3rem 0 1.6rem;
+  background-color: #f2ece4;
+}
+
+.footer-inner {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-soft);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .services-grid,
+  .pricing-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .hero {
+    height: auto;
+    padding: 7rem 0 4rem;
+  }
+
+  .services-grid,
+  .pricing-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 800px) {
+  .hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.8rem;
+    margin-top: 6rem;
+  }
+
+  .hero-logo-box {
+    max-width: 200px;   /* un pelín más pequeño en móvil */
+  }
+}
+
