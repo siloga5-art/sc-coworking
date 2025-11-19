@@ -37,13 +37,9 @@
 <section id="inicio" class="hero">
   <div class="hero-bg"></div>
   <div class="hero-overlay"></div>
-  <div class="container hero-inner">
-    <!-- Logo grande -->
-    <div class="hero-logo-box">
-      <img src="img/logo.png" alt="S&C Coworking" class="hero-logo-image">
-    </div>
 
-    <!-- Texto y botón -->
+  <div class="container hero-inner">
+    <!-- Texto a la izquierda -->
     <div class="hero-content">
       <h1>
         Bienvenido a
@@ -53,8 +49,14 @@
       <p>Tu espacio de trabajo en Cártama</p>
       <a href="#tarifas" class="btn-primary">Ver tarifas</a>
     </div>
+
+    <!-- Logo a la derecha con degradado -->
+    <div class="hero-logo-box">
+      <img src="img/logo.png" alt="S&C Coworking" class="hero-logo-image">
+    </div>
   </div>
 </section>
+
 
   </header>
 
@@ -65,25 +67,38 @@
       <div class="container">
         <h2>Nuestros servicios</h2>
 
-        <div class="services-grid">
-          <article class="service-card">
-            <div class="service-icon">☾</div>
-            <h3>Puestos flexibles</h3>
-            <p>Escritorios disponibles por horas o días.</p>
-          </article>
+<div class="services-grid">
+  <article class="service-card">
+    <div class="service-icon">👥</div>
+    <h3>Puestos compartidos</h3>
+    <p>Escritorios en zona común para trabajar acompañado y en comunidad.</p>
+  </article>
 
-          <article class="service-card">
-            <div class="service-icon">♛</div>
-            <h3>Sala de reuniones</h3>
-            <p>Reservable por horas para presentaciones y reuniones.</p>
-          </article>
+  <article class="service-card">
+    <div class="service-icon">🏢</div>
+    <h3>Oficinas privadas</h3>
+    <p>Despachos independientes para equipos o profesionales que buscan privacidad.</p>
+  </article>
 
-          <article class="service-card">
-            <div class="service-icon">📶</div>
-            <h3>Wi-Fi de alta velocidad</h3>
-            <p>Conexión estable y segura para tu trabajo diario.</p>
-          </article>
-        </div>
+  <article class="service-card">
+    <div class="service-icon">📅</div>
+    <h3>Salas de reuniones</h3>
+    <p>Salas equipadas para reuniones, presentaciones y videollamadas.</p>
+  </article>
+
+  <article class="service-card">
+    <div class="service-icon">☕</div>
+    <h3>Sala de descanso</h3>
+    <p>Un espacio relajado para tomar un café y desconectar.</p>
+  </article>
+
+  <article class="service-card">
+    <div class="service-icon">📶</div>
+    <h3>WiFi alta velocidad</h3>
+    <p>Conexión rápida y estable para tu día a día.</p>
+  </article>
+</div>
+
       </div>
     </section>
 
@@ -104,31 +119,41 @@ Por otro lado, disponemos de una sala de relax totalmente equipada, para hacer u
     </section>
 
     <!-- Tarifas -->
-    <section id="tarifas" class="section pricing">
-      <div class="container">
-        <h2>Tarifas</h2>
+<section id="tarifas" class="section pricing">
+  <div class="container">
+    <h2>Tarifas</h2>
 
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <h3>Pase diario</h3>
-            <p class="price">15 € / día</p>
-            <p>Acceso a puestos flexibles y Wi-Fi.</p>
-          </article>
+    <div class="pricing-grid">
+      <!-- Puestos compartidos -->
+      <article class="pricing-card">
+        <h3>Puestos compartidos</h3>
+        <p class="price">30 € / semana</p>
+        <p>
+          Puestos en zona compartida con WiFi de alta velocidad.
+          Opción bono mensual: <strong>100 € / mes</strong>.
+        </p>
+      </article>
 
-          <article class="pricing-card">
-            <h3>Bono mensual</h3>
-            <p class="price">150 € / mes</p>
-            <p>Puesto flexible y acceso a áreas comunes.</p>
-          </article>
+      <!-- Oficinas privadas -->
+      <article class="pricing-card">
+        <h3>Oficina privada</h3>
+        <p class="price">Desde 350 € / mes</p>
+        <p>
+          Despachos privados para profesionales o equipos, con acceso a zonas comunes.
+        </p>
+      </article>
 
-          <article class="pricing-card">
-            <h3>Sala de reuniones</h3>
-            <p class="price">20 € / hora</p>
-            <p>Incluye pantalla, pizarra y Wi-Fi.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <!-- Sala de reuniones -->
+      <article class="pricing-card">
+        <h3>Sala de reuniones</h3>
+        <p class="price">75 € / mañana o tarde</p>
+        <p>
+          Sala equipada para reuniones y presentaciones, con conexión WiFi incluida.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
 <section id="galeria" class="section gallery">
   <div class="container">
@@ -139,10 +164,10 @@ Por otro lado, disponemos de una sala de relax totalmente equipada, para hacer u
         <img src="img/galeria-1.jpg" alt="Zona de trabajo compartida">
       </div>
       <div class="gallery-item">
-        <img src="img/galeria-2.jpg" alt="Sala de reuniones">
+        <img src="img/galeria-2-nueva.jpg" alt="Sala de reuniones">
       </div>
       <div class="gallery-item">
-        <img src="img/galeria-3.jpg" alt="Espacio común">
+        <img src="img/galeria-3-nueva.jpg" alt="Espacio común">
       </div>
     </div>
   </div>
@@ -150,19 +175,43 @@ Por otro lado, disponemos de una sala de relax totalmente equipada, para hacer u
 
 
     <!-- Contacto -->
-    <section id="contacto" class="section contact">
-      <div class="container">
-        <h2>Contacto</h2>
-        <!-- <p>
-          Añade aquí tus datos de contacto, dirección, teléfono o formulario.
-        </p> -->
-        <ul class="contact-list">
-          <li><strong>Dirección:</strong>C/ Félix Revello de Toro, Local 1 29570-Cártama (Málaga)</li>
-          <li><strong>Teléfono:</strong> +34 600 000 000</li>
-          <li><strong>Email:</strong> info@syccoworking.com</li>
-        </ul>
-      </div>
-    </section>
+<section id="contacto" class="section contact">
+  <div class="container contact-inner">
+    <div class="contact-info">
+      <h2>Contacto</h2>
+      <p>Escríbenos o ven a visitarnos a nuestro espacio en Cártama.</p>
+      <ul class="contact-list">
+        <li>
+          <strong>Dirección:</strong>
+          Calle Félix Revello de Toro, Local 1, 29570
+        </li>
+        <li>
+          <strong>Teléfono:</strong>
+          <a href="tel:+34618123456">618 12 34 56</a>
+        </li>
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:c%26scoworking@gmail.com">c&amp;scoworking@gmail.com</a>
+        </li>
+      </ul>
+    </div>
+
+
+<div class="contact-location">
+  <div class="map-wrapper">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.354122592416!2d-4.630205888586332!3d36.71405557215625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72ef3f63499ca7%3A0xb84be228cfab3b6b!2zQy8gRsOpbGl4IFJldmVsbG8gZGUgVG9ybywgMSwgMjk1NzAgQ8OhcnRhbWEsIE3DoWxhZ2E!5e0!3m2!1ses!2ses!4v1763587426701!5m2!1ses!2ses"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+  </div>
+</section>
+
 
   </main>
 
